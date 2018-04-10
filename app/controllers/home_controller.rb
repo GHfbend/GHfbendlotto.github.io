@@ -14,7 +14,7 @@ class HomeController < ApplicationController
     
      @draw_numbers = []
     
-     @page_hash.each do |k, v|
+    @page_hash.each do |k, v|
        @draw_numbers << v if k.include? ('drwtNo')
     end
     
@@ -22,7 +22,7 @@ class HomeController < ApplicationController
     
     @bonus_number = @page_info["7"]
     
-    @lotto = [1..45].to_a.sample(6).sort
+    @lotto = (1..45).to_a.sample(6).sort
     
     @match_numbers = @lotto & @draw_numbers
     
