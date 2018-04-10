@@ -1,0 +1,39 @@
+<br>
+<h4><strong> 오늘의 로또</h4> </strong>
+
+<br><h5>당첨번호</h5>
+<div class="d-flex justify-content-center">
+<div class="row">
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(0)%>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(1)%>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(2)%>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(3)%>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(4)%>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @draw_numbers.at(5)%>.png"></div>
+</div><br>
+</div><br>
+
+<h5>보너스 번호</h5><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @bonus_number %>.png"><br>
+
+<br><h5>당신의 번호</h5>
+<div class="d-flex justify-content-center">
+<div class="row">
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(0) %>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(1) %>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(2) %>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(3) %>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(4) %>.png"></div>
+    <div class="col"><img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= @lotto.at(5) %>.png"></div>
+</div><br>
+</div><br>
+
+<h5>일치하는 개수: <%= @match_count %></h5>
+
+<% @match_numbers.each do |oneNum| %>
+<img src = "http://www.nlotto.co.kr//img/common_new/ball_<%= oneNum %>.png">
+<% end %><br>
+
+<br><h4>결과는 <%= @result %> 입니다.</h4>
+
+<button type="button" class="btn btn-primary" id="btn_reload">Retry</button>
+
