@@ -20,7 +20,7 @@ class HomeController < ApplicationController
     
     @draw_numbers.sort!
     
-    @bonus_number = @page_info["7"]
+    @bonus_number = @page_info["bnusNo"]
     
     @lotto = (1..45).to_a.sample(6).sort
     
